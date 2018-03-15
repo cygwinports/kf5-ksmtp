@@ -1,0 +1,25 @@
+inherit kf5
+
+NAME="kf5-ksmtp"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 SMTP library"
+DESCRIPTION="This library provides a job-based API for interacting with an SMTP
+server. Its design follows the design KIMAP."
+
+PKG_NAMES="libKPimSMTP5 libKPimSMTP-devel"
+libKPimSMTP5_CONTENTS="
+	etc/xdg/ksmtp.categories
+	usr/bin/cygKPimSMTP-5.dll
+	usr/share/doc/${NAME}
+	usr/share/locale/*/LC_MESSAGES/libksmtp5.mo
+"
+libKPimSMTP_devel_REQUIRES="libKF5Mime-devel libKF5CoreAddons-devel"
+libKPimSMTP_devel_CONTENTS="
+	usr/include/KPim/KSMTP/
+	usr/include/KPim/ksmtp_version.h
+	usr/lib/cmake/KPimSMTP/
+	usr/lib/libKPimSMTP.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_KSMTP.pri
+"
